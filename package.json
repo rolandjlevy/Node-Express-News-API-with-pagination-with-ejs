@@ -1,0 +1,17 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "emoji-flags": "^1.2.0",
+    "ejs": "^3.0.1",
+    "dotenv": "^8.1.0",
+    "node-fetch": "^2.6.0",
+    "express": "latest",
+    "body-parser": "latest"
+  }
+}
