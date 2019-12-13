@@ -13,8 +13,6 @@
   <h2><%= emoji.get(`:${query.country}:`) %> News</h2>
 <% } %>
 
-
-
 <hr />
 
 <% articles.forEach((item, index) => {
@@ -27,7 +25,7 @@
       <ul>
         <li><span class="font-weight-700">Title:</span> <%= title || 'N/A' %></li>
         <li><span class="font-weight-700">Description:</span> <%= description || 'N/A' %></li>
-        <li><span class="font-weight-700">Link:</span> <a href='<%= url %>' target='_blank'>Find out more</a></li>
+        <li><span class="font-weight-700">Link:</span> <a href='<%= url %>' target='_blank' class='passive-title'>Find out more</a></li>
         <li><span class="font-weight-700">Author:</span> <%= author || 'N/A' %></li>
       </ul>
     </div>

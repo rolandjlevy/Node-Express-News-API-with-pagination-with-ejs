@@ -18,8 +18,8 @@ h3.header {
 }
 
 .wrapper {
-  display:flex;
-  justify-content:space-around;
+  display: flex;
+  justify-content: flex-start;
 }
 
 ul {
