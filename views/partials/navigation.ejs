@@ -1,6 +1,16 @@
-<a href='/'>Home</a> | 
-<a href='/news?country=gb&page=1'>UK</a> | 
-<a href='/news?country=us&page=1'>US</a> | 
-<a href='/news?country=de&page=1'>DE</a> | 
-<a href='/news?country=fr&page=1'>FR</a> | 
-<a href='/news?country=pt&page=1' class="m-r-10">PT</a>
+<a href='/' class="<%= query.country ? 'passive-title' : 'active-title' %>">Home</a>
+<%
+  const countries = {
+    gb: 'UK',
+    us: 'US',
+    de: 'DE',
+    fr: 'FR',
+    pt: 'PT',
+    jp: 'JP'
+  }
+  Object.keys(countries).forEach(key => { 
+    const className = (query.country === key) ? 'active-title' : 'passive-title';
+%>
+   | <a href='/news?country=<%= key %>&page=1' class='<%= className %>'><%= countries[key] %></a>
+
+<% }); %>

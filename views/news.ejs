@@ -1,11 +1,13 @@
-<%
-  const { totalPages, pageSize, articles } = news;
-  const pages = Math.floor(totalPages / pageSize);
-  const pagination = new Array(pages).fill(0).map((_, index) => index);
-  pagination.forEach(page => { 
-    const current = (query.page == page + 1) ? 'active' : 'passive'; %>
-    <a class="<%= current %>" href='/news?country=<%= query.country %>&page=<%= page + 1 %>'><%= page + 1 %></a>
-<% }); %>
+<span class="m-l-15">
+  <%
+    const { totalPages, pageSize, articles } = news;
+    const pages = Math.floor(totalPages / pageSize);
+    const pagination = new Array(pages).fill(0).map((_, index) => index);
+    pagination.forEach(page => { 
+      const className = (query.page == page + 1) ? 'active' : 'passive'; %>
+      <a class="<%= className %>" href='/news?country=<%= query.country %>&page=<%= page + 1 %>'><%= page + 1 %></a>
+  <% }); %>
+</span>
 
 <h2>News > <%= query.country.toUpperCase() %></h2>
 
@@ -13,7 +15,7 @@
 
 <% articles.forEach((item, index) => {
     const { author, title, description, url, urlToImage } = item; %>
-    <h3>Article <%= (pageSize * (query.page - 1)) + index + 1 %></h3>
+    <h3 class="header">Article <%= (pageSize * (query.page - 1)) + index + 1 %></h3>
     <div class="wrapper">
       <% if (urlToImage) { %> 
         <a href='<%= url %>' target='_blank'><img src="<%= urlToImage %>" class="article"></a>
