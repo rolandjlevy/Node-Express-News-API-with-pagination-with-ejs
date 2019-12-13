@@ -48,12 +48,14 @@ img.article {
   width: 200px;
   height: 100%;
   opacity: 0.9;
+  transition: all 0.25s ease;
 }
 
 img.article:hover {
   cursor: pointer;
   opacity: 1;
   border: 5px solid var(--orange-light);
+  transition: all 0.25s ease;
 }
 
 /**************/
