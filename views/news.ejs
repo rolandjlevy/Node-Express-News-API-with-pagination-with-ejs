@@ -14,12 +14,16 @@
 <% articles.forEach((item, index) => {
     const { author, title, description, url, urlToImage } = item; %>
     <h3>Article <%= (pageSize * (query.page - 1)) + index + 1 %></h3>
-    <ul>
-      <li><span class="font-weight-700">Title:</span> <%= title || 'N/A' %></li>
-      <li><span class="font-weight-700">Description:</span> <%= description || 'N/A' %></li>
-      <li><span class="font-weight-700">Link:</span> <a href='<%= url %>' target='_blank'>Find out more</a></li>
-      <li><span class="font-weight-700">Author:</span> <%= author || 'N/A' %></li>
-    </ul>
-    <% if (urlToImage) { %> <img src="<%= urlToImage %>" class="article"> <% } %>
+    <div class="wrapper">
+      <% if (urlToImage) { %> 
+        <a href='<%= url %>' target='_blank'><img src="<%= urlToImage %>" class="article"></a>
+      <% } %>
+      <ul>
+        <li><span class="font-weight-700">Title:</span> <%= title || 'N/A' %></li>
+        <li><span class="font-weight-700">Description:</span> <%= description || 'N/A' %></li>
+        <li><span class="font-weight-700">Link:</span> <a href='<%= url %>' target='_blank'>Find out more</a></li>
+        <li><span class="font-weight-700">Author:</span> <%= author || 'N/A' %></li>
+      </ul>
+    </div>
     <% if (index < 9) { %> <hr /> <% } %>
 <% }); %>
