@@ -10,3 +10,4 @@ Node.js and Express.js app to show news articles with pagination. Getting the la
 + [News API](https://newsapi.org)
 + [Express.js](http://expressjs.com)
 + [ejs templating](https://ejs.co)
++ [Emoji node package](https://www.npmjs.com/package/node-emoji)

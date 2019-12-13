@@ -7,11 +7,12 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "emoji-flags": "^1.2.0",
-    "ejs": "^3.0.1",
+    "body-parser": "latest",
     "dotenv": "^8.1.0",
-    "node-fetch": "^2.6.0",
+    "ejs": "^3.0.1",
+    "emoji-flags": "^1.2.0",
     "express": "latest",
-    "body-parser": "latest"
+    "node-emoji": "^1.10.0",
+    "node-fetch": "^2.6.0"
   }
 }

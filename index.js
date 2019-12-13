@@ -1,5 +1,7 @@
 const express = require('express');
 const fetch = require('node-fetch');
+const emoji = require('node-emoji');
+
 const app = express();
 const port = 8080;
 
@@ -39,7 +41,8 @@ const goToNews = async (req, res) => {
   res.locals.news = {
     articles: result.articles,
     totalPages,
-    pageSize
+    pageSize,
+    emoji
   }
   res.render('layout.ejs', { title: 'News', content:'news.ejs' });
 }

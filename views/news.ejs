@@ -1,6 +1,6 @@
 <span class="m-l-15">
   <%
-    const { totalPages, pageSize, articles } = news;
+    const { totalPages, pageSize, articles, emoji } = news;
     const pages = Math.floor(totalPages / pageSize);
     const pagination = new Array(pages).fill(0).map((_, index) => index);
     pagination.forEach(page => { 
@@ -9,7 +9,11 @@
   <% }); %>
 </span>
 
-<h2>News > <%= query.country.toUpperCase() %></h2>
+<% if (emoji) { %>
+  <h2><%= emoji.get(`:${query.country}:`) %> News</h2>
+<% } %>
+
+
 
 <hr />
 
