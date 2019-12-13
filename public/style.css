@@ -102,7 +102,7 @@ a.passive:hover {
 a.active:active,
 a.passive:active {
   color: #fff;
-  background-color: #333;
+  background-color: var(--orange-deep);
 }
 
 /**************/
